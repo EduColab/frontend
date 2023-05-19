@@ -1,11 +1,12 @@
 .footer {
-  height: 624px;
+  height: 390px;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
 
-  background-color: var(--olivine);
+  background-color: var(--gray);
 }
 
 .links {
@@ -19,7 +20,7 @@
   justify-content: space-evenly;
 }
 .logo {
-  width: 20%;
+  width: 30%;
   height: 200px;
 
   display: flex;
@@ -28,13 +29,8 @@
   justify-content: space-evenly;
 }
 .logo div {
-  margin-bottom: 20px;
-
-  padding: 20px;
-
   font-size: 2rem;
   font-weight: bold;
-  background-color: var(--gray);
 }
 .logo p {
   margin-top: 20px;
@@ -60,15 +56,14 @@
 .contacts li {
   width: 235px;
   height: 35px;
-  margin: 15px 0px;
+  margin: 3px 0px;
   padding-left: 10px;
   list-style: none;
-  background-color: var(--davys--gray);
 }
 .contacts li a {
   text-decoration: none;
-  color: var(--white);
-  font-size: 1.5rem;
+  color: black;
+  font-size: 1.25rem;
 }
 .contacts li a:hover {
   color: var(--green-yellow);
@@ -91,5 +86,20 @@
 }
 .networks a:hover {
   color: var(--green-yellow);
-  font-size: 2rem;
+}
+
+/**/
+.pages {
+  display: flex;
+}
+.pages p {
+  margin: 0px 15px;
+}
+.pages p a {
+  text-decoration: none;
+  color: black;
+}
+.pages p a:hover {
+  color: var(--green-yellow);
+  text-decoration: underline;
 }

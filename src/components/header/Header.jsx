@@ -22,7 +22,7 @@ export const Header = () => {
       </div>
       <div>
         <p className={styles.p}>
-          Facilitamos la conexión con las uiversidades y
+          Facilitamos la conexión con las universidades y
         </p>
         <p className={styles.p}>ayudarte en tu camino profesional.</p>
       </div>
