@@ -1,17 +1,14 @@
-import Image from "next/image";
-import styles from "../styles/page.module.css";
-import Nav from "@/components/Nav";
-
+"use client"
+import Nav from "@/components/navbar/Nav";
+import { Header } from "@/components/header/Header";
 export default function Home() {
   return (
     <>
       <Nav />
       <section className="section1">
-
+        <Header />
       </section>
-      <section className="">
-
-      </section>
+      <section className=""></section>
     </>
   );
 }
