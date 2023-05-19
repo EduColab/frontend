@@ -1,0 +1,95 @@
+.footer {
+  height: 624px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  background-color: var(--olivine);
+}
+
+.links {
+  list-style: none;
+}
+
+.logo_and_contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.logo {
+  width: 20%;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.logo div {
+  margin-bottom: 20px;
+
+  padding: 20px;
+
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: var(--gray);
+}
+.logo p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  line-height: 24px;
+}
+
+/*divider*/
+.divider {
+  width: 2px;
+  height: 100%;
+  background-color: black;
+}
+
+/*contacts*/
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contacts li {
+  width: 235px;
+  height: 35px;
+  margin: 15px 0px;
+  padding-left: 10px;
+  list-style: none;
+  background-color: var(--davys--gray);
+}
+.contacts li a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1.5rem;
+}
+.contacts li a:hover {
+  color: var(--green-yellow);
+}
+
+/*social networks*/
+.networks {
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.networks a {
+  margin: 0px 20px;
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: 0.2s;
+  color: var(--davys--gray);
+}
+.networks a:hover {
+  color: var(--green-yellow);
+  font-size: 2rem;
+}
