@@ -1,0 +1,28 @@
+.universities_section {
+    height: 1024px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+}
+
+.carousel_item {
+    height: 345px;
+  flex: 0 0 calc(100% / 4);
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+}
+
+.carousel_item:not(:last-child) {
+  margin-right: 10px;
+}
