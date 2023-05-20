@@ -1,10 +1,9 @@
-"use client"
+"use client";
 import React from "react";
 import Link from "next/link";
-import styles from "./Nav.module.css"
+import styles from "./Nav.module.css";
 const Nav = () => {
   return (
-    
     <header className={styles.header}>
       <p className={styles.logo}>EduColab</p>
       <nav className={styles.nav}>

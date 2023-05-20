@@ -1,7 +1,7 @@
 "use strict";
 exports.config = {
   app_name: ["Educolab"],
-  license_key: process.env.LICENSE_KEY,
+  license_key: process.env.NEXT_PUBLIC_LICENSE_KEY,
   logging: { level: "info" },
   allow_all_headers: true,
   attributes: {
