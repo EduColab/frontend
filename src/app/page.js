@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Nav from "@/components/navbar/Nav";
 import { Header } from "@/components/header/Header";
@@ -8,7 +7,7 @@ import CommunitySection from "@/components/CommunitySection/CommunitySection";
 export default function Home() {
   return (
     <>
-     <Nav />
+      <Nav />
       <Header />
       <CommunitySection />
       <Footer />
