@@ -1,0 +1,31 @@
+.componente-tarjeta {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  h2{
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #99ff6d;
+  }
+  
+  .scroll-horizontal {
+    display: flex;
+    overflow-x: scroll;
+  }
+  
+  .card {
+    width: 200px;
+    margin-right: 10px;
+  }
+  
+  .card img {
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
+  }
+  
+  .card-content {
+    padding: 10px;
+  }
