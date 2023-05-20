@@ -25,24 +25,24 @@ jobs:
 
       - run: npm ci
       - run: npm i
-#       - run: npm run build-production 
+      - run: npm run build 
 
-#       - name: Deploy to Stage
-#         if: github.ref == 'refs/heads/stage'
-#         run: |
-#           cd ../
-#           sudo mkdir -p stage
-#           sudo cp -r backend stage
-#           cd stage/backend
-#           sudo cp -r ./env/.env.stage .env
-#           pm2 restart backend-stage
+      - name: Deploy to Stage
+        if: github.ref == 'refs/heads/stage'
+        run: |
+          cd ../
+          sudo mkdir -p stage
+          sudo cp -r frontend stage
+          cd stage/frontend
+          sudo cp -r ./env/.env.stage .env
+          pm2 restart frontend-stage
 
-#       - name: Deploy to Production
-#         if: github.ref == 'refs/heads/main'
-#         run: |
-#           cd ../
-#           sudo mkdir -p production
-#           sudo cp -r backend production
-#           cd production/backend
-#           sudo cp -r ./env/.env.production .env
-#           pm2 restart backend-production
+      - name: Deploy to Production
+        if: github.ref == 'refs/heads/main'
+        run: |
+          cd ../
+          sudo mkdir -p production
+          sudo cp -r frontend production
+          cd production/frontend
+          sudo cp -r ./env/.env.production .env
+          pm2 restart frontend-production
