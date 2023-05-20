@@ -3,6 +3,7 @@
 import React from "react";
 import { useState } from "react";
 import styles from "./RegisterForm.module.css";
+import Link from "next/link";
 
 const RegisterForm = () => {
   const [username, setUsername] = useState("");
@@ -25,6 +26,7 @@ const RegisterForm = () => {
         onChange={(e) => setUsername(e.target.value)}
         required
         className={styles.form_inputs}
+        placeholder="username"
       />
 
       {/* Email */}
@@ -37,6 +39,7 @@ const RegisterForm = () => {
         onChange={(e) => setEmail(e.target.value)}
         required
         className={styles.form_inputs}
+        placeholder="example@gmail.com"
       />
 
       {/* Password */}
@@ -49,10 +52,14 @@ const RegisterForm = () => {
         onChange={(e) => setPassword(e.target.value)}
         required
         className={styles.form_inputs}
+        placeholder="contraseña"
       />
 
       {/* Send button */}
       <button type="submit" className={styles.button}>Registrarse</button>
+      <p className={styles.no_account_link}>
+        <Link href="/login">¿Ya tienes una cuenta?</Link>
+      </p>
     </form>
   );
 };
