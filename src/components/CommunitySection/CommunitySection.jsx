@@ -1,3 +1,4 @@
+import Link from "next/link";
 import style from "./CommunitySection.module.css";
 
 const CommunitySection = () => {
@@ -7,7 +8,9 @@ const CommunitySection = () => {
       <p className={style.phrase}>
         Puedes ingresar a la comunidad de tu escuela con tu sesión
       </p>
-      <button className={style.button}>Iniciar sesión</button>
+      <Link className={style.button} href="/login">
+        Iniciar sesión
+      </Link>
     </section>
   );
 };
