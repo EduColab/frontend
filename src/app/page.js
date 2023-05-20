@@ -1,17 +1,19 @@
 import Image from "next/image";
-import styles from "../styles/page.module.css";
-import Nav from "@/components/Nav";
+import Nav from "@/components/navbar/Nav";
+import { Header } from "@/components/header/Header";
+import Footer from "@/components/Footer/Footer";
+import CommunitySection from "@/components/CommunitySection/CommunitySection";
+import Carrers from "../components/careers/careers.jsx"
+
 
 export default function Home() {
   return (
     <>
       <Nav />
-      <section className="section1">
-
-      </section>
-      <section className="">
-
-      </section>
+      <Header />
+      <Carrers />
+      <CommunitySection />
+      <Footer />
     </>
   );
 }

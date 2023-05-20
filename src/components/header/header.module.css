@@ -1,0 +1,105 @@
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 2.5em;
+  word-wrap: break-word;
+  text-align: center;
+  gap: 1em;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 120px;
+  background-image: url("../../../public/student-min.png");
+  width: 327px;
+  height: 327px;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.h1 {
+  position: relative;
+  width: 900px;
+}
+.h1::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  right: -10px;
+  bottom: -10px;
+  background: #fff869;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(60px);
+}
+.h1::after {
+  content: "";
+  position: absolute;
+  top: 130px;
+  left: -280px;
+  right: -10px;
+  bottom: -10px;
+  background: #99ff6d;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(60px);
+}
+.input {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  border: none;
+  height: 50px;
+  background-color: #c7ff65;
+  border-radius: 40px;
+  color: #000;
+}
+.input:focus {
+  outline-style: none;
+}
+.input::placeholder {
+  color: #000;
+}
+.pseudoInput {
+  position: relative;
+  width: 35%;
+}
+.pseudoInput::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: -6px;
+  left: 5px;
+  border-radius: 40px;
+  z-index: -1;
+  background-color: #2b2b2b;
+}
+.pseudoInput::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='24' viewBox='0 0 37 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Vector' d='M36.0208 25.809L27.8696 19.045C29.2888 17.138 30.1468 14.9135 30.1468 12.5081C30.1468 5.59976 23.3986 0 15.0734 0C6.74825 0 0 5.59976 0 12.5081C0 19.4164 6.74825 25.0161 15.0734 25.0161C17.9722 25.0161 20.6529 24.3041 22.9487 23.1284L31.1023 29.8924C31.7584 30.4188 32.6377 30.7103 33.5504 30.7038C34.4631 30.6974 35.3363 30.3935 35.9815 29.8578C36.6268 29.3221 36.9925 28.5975 36.9999 27.8401C37.0072 27.0827 36.6556 26.3532 36.0208 25.809ZM15.0734 21.1675C9.31074 21.1675 4.63798 17.29 4.63798 12.5081C4.63798 7.72614 9.31074 3.84864 15.0734 3.84864C20.8361 3.84864 25.5089 7.72614 25.5089 12.5081C25.5089 17.29 20.8361 21.1675 15.0734 21.1675Z' fill='black'/%3E%3C/svg%3E");
+  position: absolute;
+  top: 28px;
+  right: 10px;
+  width: 30px;
+  height: 24px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.p {
+    
+  font-size: 15px;
+  font-weight: 900;
+}
