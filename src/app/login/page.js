@@ -9,7 +9,7 @@ const LoginPage = () => {
   return (
     <section className={styles.section}>
       <div className={styles.login_box}>
-        <h1 className={styles.title}>Iniciar sesión</h1>
+        <h2 className={styles.title}>Iniciar sesión</h2>
         <LoginForm />
       </div>
     </section>
