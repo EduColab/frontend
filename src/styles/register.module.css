@@ -47,8 +47,23 @@
   filter: blur(60px);
 }
 
+.return_button {
+  position: relative;
+  top: 21px;
+  left: -212px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+}
+.return_button:hover {
+  cursor: pointer;
+  color: var(--davys--gray);
+}
+
 .title {
   padding: 35px 0px;
   height: 20%;
   font-weight: 1000;
+  color: black;
 }

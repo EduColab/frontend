@@ -13,9 +13,9 @@ const Nav = () => {
         <a>Escuelas</a>
       </nav>
       <div className={styles.logInfo}>
-        <p>Iniciar sesión</p>
+        <Link href="/login" className={styles.link}>Iniciar sesión</Link>
         <span>|</span>
-        <p>Registrate</p>
+        <Link href="/register" className={styles.link}>Registrate</Link>
       </div>
     </header>
   );
