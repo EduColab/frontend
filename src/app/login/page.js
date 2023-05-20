@@ -5,7 +5,7 @@ import styles from "../../styles/login.module.css";
 import dynamic from "next/dynamic";
 import LoginForm from "@/components/LoginForm/LoginForm";
 
-const AuthPage = () => {
+const LoginPage = () => {
   return (
     <section className={styles.section}>
       <div className={styles.login_box}>
@@ -16,4 +16,4 @@ const AuthPage = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(AuthPage), { ssr: false });
+export default dynamic(() => Promise.resolve(LoginPage), { ssr: false });

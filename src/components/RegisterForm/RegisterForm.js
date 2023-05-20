@@ -2,30 +2,32 @@
 
 import React from "react";
 import { useState } from "react";
+import styles from "./RegisterForm.module.css";
+
 const RegisterForm = () => {
-  const [nombre, setNombre] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar los datos del formulario al servidor
+    // Aquí pueden agregar la lógica para enviar los datos del formulario al servidor
   };
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
-      {/* Campo de nombre */}
-      <label htmlFor="nombre" className={styles.form_labels}>Nombre:</label>
+      {/* Username*/}
+      <label htmlFor="username" className={styles.form_labels}>Username:</label>
       <input
         type="text"
-        id="nombre"
-        name="nombre"
-        value={nombre}
-        onChange={(e) => setNombre(e.target.value)}
+        id="username"
+        name="username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
         required
         className={styles.form_inputs}
       />
 
-      {/* Campo de correo electrónico */}
+      {/* Email */}
       <label htmlFor="email" className={styles.form_labels}>Correo electrónico:</label>
       <input
         type="email"
@@ -37,7 +39,7 @@ const RegisterForm = () => {
         className={styles.form_inputs}
       />
 
-      {/* Campo de contraseña */}
+      {/* Password */}
       <label htmlFor="password" className={styles.form_labels}>Contraseña:</label>
       <input
         type="password"
@@ -49,7 +51,7 @@ const RegisterForm = () => {
         className={styles.form_inputs}
       />
 
-      {/* Botón de enviar */}
+      {/* Send button */}
       <button type="submit" className={styles.button}>Registrarse</button>
     </form>
   );
