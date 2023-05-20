@@ -50,7 +50,7 @@ const LoginForm = () => {
         Iniciar sesión
       </button>
       <p className={styles.no_account_link}>
-        <Link href="#">¿No tienes una cuenta?</Link>
+        <Link href="/register">¿No tienes una cuenta?</Link>
       </p>
     </form>
   );
