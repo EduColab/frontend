@@ -3,7 +3,7 @@ import axios from "axios";
 export const RegisterService = async ( email, password, username ) => {
   
   const url = process.env.NEXT_PUBLIC_REGISTER_API;
-
+  console.log("Url" + url);
   const data = `username=${username}&password=${password}&email=${email}`
   
   const options = {

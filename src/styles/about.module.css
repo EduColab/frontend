@@ -1,0 +1,69 @@
+.about_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_content {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.title {
+  width: 100%;
+  height: 300px;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../public/books.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #99ff6d;
+  text-decoration: underline;
+}
+.text_div {
+  padding: 50px 390px;
+  width: 100%;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+.text_div {
+  position: relative;
+}
+.text_div::before {
+  content: "";
+  position: absolute;
+  top: 200px;
+  left: 20px;
+
+  background: #fff869;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(60px);
+}
+.text_div::after {
+  content: "";
+  position: absolute;
+  top: 130px;
+  right: -10px;
+
+  background: #99ff6d;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(60px);
+}
