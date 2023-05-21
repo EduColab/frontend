@@ -8,7 +8,7 @@ const ComponenteTarjeta = ({src, title}) => {
     <div className="componente-tarjeta">
       <div className="title-container">
         <h2>Carreras / Cursos</h2>
-        <button className="verTodosBtn">Ver todos</button>
+        <Link href="/carrersLong" className="verTodosBtn">Ver todos</Link>
       </div>
       <div className="scroll-horizontal">
         <Cards 
