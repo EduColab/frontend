@@ -1,5 +1,5 @@
 .componente-tarjeta {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     padding: 20px;
     margin-top: 40px;
@@ -29,3 +29,26 @@
   .card-content {
     padding: 10px;
   }
+.title-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+.verTodosBtn{
+  width: 90px;
+  margin-top: 9px;
+  background-color: #fff869;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+
+  
+}
+.verTodosBtn .link{
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  margin: 7px;
+  display: flex;
+}
