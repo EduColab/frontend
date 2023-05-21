@@ -9,6 +9,7 @@ import Universities from "@/components/universities/universities";
 
 
 export default function Home({titleC}) {
+  
   return (
     <>
       <Nav />
