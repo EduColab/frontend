@@ -42,4 +42,13 @@
   height: 30px;
   border-radius: 5px;
   border: none;
+
+  
+}
+.verTodosBtn .link{
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  margin: 7px;
+  display: flex;
 }
