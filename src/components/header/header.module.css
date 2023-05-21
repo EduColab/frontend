@@ -98,8 +98,21 @@
   margin-right: 10px;
   cursor: pointer;
 }
-.p {
-    
+.p {  
   font-size: 15px;
   font-weight: 900;
+}
+.p::before{
+  content: "";
+  position: absolute;
+  top: 500px;
+  left: 420px;
+  right: -10px;
+  bottom: -10px;
+  background: #fff869;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(60px);
 }
