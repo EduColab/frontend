@@ -10,7 +10,7 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['educolabnode'],
+  app_name: ['educolab-stage'],
   /**
   * Your New Relic license key.
   */
