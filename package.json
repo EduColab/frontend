@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@newrelic/next": "^0.5.0",
+    "dotenv": "^16.0.3",
     "newrelic": "^10.1.1",
     "next": "13.4.2",
     "react": "18.2.0",
