@@ -4,15 +4,18 @@ import React from "react";
 import { useState } from "react";
 import styles from "./RegisterForm.module.css";
 import Link from "next/link";
-
+import {RegisterService} from "../../services/registerService"
 const RegisterForm = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Aquí pueden agregar la lógica para enviar los datos del formulario al servidor
+   
+    const result = await RegisterService(email, password, username)
+    console.log(result)
   };
   return (
     <form onSubmit={handleSubmit} className={styles.form}>

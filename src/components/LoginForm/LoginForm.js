@@ -4,12 +4,14 @@ import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./LoginForm.module.css";
+import { LoginService } from "@/services/loginService";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
+    
     e.preventDefault();
     // Lógica para enviar datos de login al servidor
     console.log("Email:", email);
@@ -17,6 +19,8 @@ const LoginForm = () => {
     // Restablecer los campos del formulario
     setEmail("");
     setPassword("");
+    const result  = await LoginService(email, password)
+    console.log(result)
   };
   return (
     <form onSubmit={handleLogin} className={styles.form}>
