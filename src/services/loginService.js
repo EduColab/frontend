@@ -3,7 +3,7 @@ import axios from 'axios'
 export const LoginService = async (email, password) => {
 
     const url = process.env.NEXT_PUBLIC_LOGIN_API;
-
+    console.log(url)
     const data = `password=${password}&email=${email}`
     
     const options = {
@@ -13,7 +13,8 @@ export const LoginService = async (email, password) => {
       data: data,
       url,
     };
+    console.log(options)
     const result = await axios(options)
-    return result;
+    return result?.data;
 }
 
