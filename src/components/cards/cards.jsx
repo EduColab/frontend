@@ -6,6 +6,7 @@ const cards = ({src, title}) => {
       <img
         src={src}
         alt="Imagen"
+        className="card-image-long"
       />
       <div className="card-content">
         <h4>{title}</h4>

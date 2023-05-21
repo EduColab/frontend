@@ -65,8 +65,27 @@
 .long-carrers-input::placeholder {
   color: #000;
 }
-.mini-cards {
+.cards-long-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+.cards-long {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.card-image-long {
+  width: 200px !important;
+  height: 250px !important;
+}
+
+@media (max-width: 768px) {
+  .cards-long {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 400px;
+  }
 }
