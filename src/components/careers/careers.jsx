@@ -2,8 +2,25 @@ import React from "react";
 import Cards from "../cards/cards";
 import Link from "next/link";
 import "./careers.modules.css"; 
+// import axios from "axios";
 
 const ComponenteTarjeta = ({src, title}) => {
+
+  // const [token, setToken] = React.useState("");
+  // const [programs, setPrograms] = React.useState([]);
+
+  // React.useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     setToken(localStorage.getItem("token"));
+      
+  //     axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/programs`, {headers: {Authorization: `Bearer ${token}`}})
+  //     .then((res) => {
+  //       console.log(res)
+  //     })
+  //   }
+
+  // }, []);
+
   return (
     <div className="componente-tarjeta">
       <div className="title-container">
