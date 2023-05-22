@@ -13,14 +13,11 @@ const LoginForm = () => {
   const handleLogin = async (e) => {
     
     e.preventDefault();
-    // Lógica para enviar datos de login al servidor
-    console.log("Email:", email);
-    console.log("Password:", password);
-    // Restablecer los campos del formulario
     setEmail("");
     setPassword("");
     const result  = await LoginService(email, password)
-    console.log(result)
+    localStorage.setItem('token', result.token);
+    // console.log(localStorage.getItem('token'))
   };
   return (
     <form onSubmit={handleLogin} className={styles.form}>
