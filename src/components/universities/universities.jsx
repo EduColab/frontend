@@ -13,7 +13,10 @@ const universities = ({ src, title }) => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      setToken(localStorage.getItem("token"));
+      const localToken = localStorage.getItem("token");
+      if (localToken) {
+        setToken(localToken);
+      }
     }
   }, []);
 
@@ -34,7 +37,7 @@ const universities = ({ src, title }) => {
         <button className="verTodosBtn">{universities.length}</button>
       </div>
       <div className="scroll-horizontal">
-        {universities.map((university) => (
+        {universities?.map((university) => (
           <Cards title={university.name} src={'https://static.vecteezy.com/system/resources/previews/013/139/659/original/library-school-education-learning-university-flat-line-filled-icon-beautiful-logo-button-over-yellow-background-for-ui-and-ux-website-or-mobile-application-free-vector.jpg'} url={'university'} id={university.id}/>
         ))}
         {/* <Cards
