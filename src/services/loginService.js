@@ -20,6 +20,7 @@ export const LoginService = async (email, password) => {
   if (result.status === 200) {
     localStorage.setItem("token", result.data.token);
     localStorage.setItem("user", userTemp);
+    localStorage.setItem("email", email)
     window.location.href = "/"; // or whatever route you want to redirect to
   }
 
