@@ -6,8 +6,8 @@ import Footer from "@/components/Footer/Footer";
 import CommunitySection from "@/components/CommunitySection/CommunitySection";
 import Caption from "@/components/caption/caption";
 import Carrers from "../components/careers/careers.jsx";
-import Universities from "@/components/universities/universities";
-import { useState } from "react";
+import Universities from "@/components/university/universities.jsx";
+
 
 
 
@@ -16,7 +16,7 @@ export default function Home({titleC}) {
   return (
     <>
       <Nav />
-      <Header setRecurso={handleSetRecurso}/>
+      <Header/>
       <Caption />
       <Carrers />
       <Universities />

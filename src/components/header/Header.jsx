@@ -4,7 +4,7 @@ import styles from "./header.module.css";
 import { chakra } from "@/app/fonts";
 import { SearchBarList } from "../serchBarList/searchBarList.jsx";
 import axios from "axios";
-export const Header = ({setRecurso}) => {
+export const Header = () => {
   const [input, setinput] = useState("");
   const [results, setResults] = useState([]);
   const [tokenstorage, setTokenstorage] = useState("");
@@ -51,7 +51,7 @@ export const Header = ({setRecurso}) => {
           value={input}
           onChange={(e) => handleChange(e.target.value)}
         />
-        <SearchBarList results={results} setRecurso={setRecurso}/>
+        <SearchBarList results={results} />
       </div>
       <div>
         <p className={styles.p}>

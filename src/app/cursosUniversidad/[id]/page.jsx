@@ -1,9 +1,11 @@
 import React from 'react'
 
-const page = ({params}) => {
+const CursoUniversidad = ({params}) => {
+    const {id} = params
+    console.log(params)
   return (
-    <div>page {params}</div>
+    <div>page {id}</div>
   )
 }
 
-export default page
+export default CursoUniversidad
