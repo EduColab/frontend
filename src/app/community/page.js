@@ -30,7 +30,7 @@ const CommunityPage = () => {
         let data = await response.json();
         data = data.splice(0,5);
         setUniversities(data);
-        console.log(data);
+        // console.log(data);
       } catch (error) {
         console.error(error);
       }
@@ -58,7 +58,7 @@ const CommunityPage = () => {
         let data = await response.json();
         data = data.splice(0,5);
         setCourses(data);
-        console.log(data);
+        // console.log(data);
       } catch (error) {
         console.error(error);
       }

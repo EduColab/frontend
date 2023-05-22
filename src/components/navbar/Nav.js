@@ -2,10 +2,17 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./Nav.module.css";
+import { useState, useEffect } from "react";
+
 const Nav = () => {
-  const username = localStorage.getItem("user");
-  
-  
+  const [username, setUsername] = useState(null);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const usernamestorage = localStorage.getItem("user");
+      setUsername(usernamestorage);
+    }
+  }, []);
+
   return (
     <header className={styles.header}>
       <p className={styles.logo}>
@@ -35,10 +42,15 @@ const Nav = () => {
 
         <span>|</span>
         {username ? (
-          <p className={styles.link} onClick={()=>{
-            localStorage.removeItem('user')
-            window.location.href = "/";
-          }}>cerrar sesión</p>
+          <p
+            className={styles.link}
+            onClick={() => {
+              localStorage.removeItem("user");
+              window.location.href = "/";
+            }}
+          >
+            cerrar sesión
+          </p>
         ) : (
           <Link href="/register" className={styles.link}>
             Registrate
