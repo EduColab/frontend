@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./header.module.css";
 import { chakra } from "@/app/fonts";
 import { SearchBarList } from "../serchBarList/searchBarList.jsx";
