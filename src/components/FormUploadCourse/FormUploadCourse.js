@@ -1,16 +1,18 @@
 import React from "react";
 import styles from "./FormUploadCourse.module.css";
+import dynamic from "next/dynamic";
+
 
 const FormUploadCourse = () => {
   return (
     <form
       action="/ruta-de-procesamiento"
       method="POST"
-      enctype="multipart/form-data"
+      encType="multipart/form-data"
       className={styles.form_container}
     >
       <div>
-        <label for="titulo">Título del curso:</label>
+        <label htmlFor="titulo">Título del curso:</label>
         <input
           className={styles.form_inputs}
           type="text"
@@ -20,7 +22,7 @@ const FormUploadCourse = () => {
         />
       </div>
       <div>
-        <label for="descripcion">Descripción:</label>
+        <label htmlFor="descripcion">Descripción:</label>
         <textarea
           className={styles.form_inputs}
           id="descripcion"
@@ -29,7 +31,7 @@ const FormUploadCourse = () => {
         ></textarea>
       </div>
       <div className={styles.archive}>
-        <label for="archivo">Archivo del curso:</label>
+        <label htmlFor="archivo">Archivo del curso:</label>
         <input
           className={styles.form_inputs}
           type="file"
@@ -56,4 +58,6 @@ const FormUploadCourse = () => {
   );
 };
 
-export default FormUploadCourse;
+export default dynamic(async () => await Promise.resolve(FormUploadCourse), {
+  ssr: false,
+});

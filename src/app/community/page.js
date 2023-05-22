@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import CommunityCourses from "@/components/CommunityCourses/CommunityCourses";
 import CommunityUpcomingCourses from "@/components/CommunityUpcomingCourses/CommunityUpcomingCourses";
 import FormUploadCourse from "@/components/FormUploadCourse/FormUploadCourse";
+import dynamic from "next/dynamic";
 
 const CommunityPage = () => {
   const [universities, setUniversities] = useState([]);
@@ -87,8 +88,13 @@ const CommunityPage = () => {
         <TopList name={"Cursos"} list={courses} />
       </div>
       <div className={styles.section_community_courses}>
-        <h2 className={styles.section_community_courses_title}>Cursos de Comunidad</h2>
-        <p  className={styles.section_community_courses_description}> Descubre los cursos de la comundiad más votados </p>
+        <h2 className={styles.section_community_courses_title}>
+          Cursos de Comunidad
+        </h2>
+        <p className={styles.section_community_courses_description}>
+          {" "}
+          Descubre los cursos de la comundiad más votados{" "}
+        </p>
         <div className={styles.community_courses_list}>
           {courses.map(({ id, name, description }) => {
             return (
@@ -107,13 +113,14 @@ const CommunityPage = () => {
         <CommunityUpcomingCourses />
       </div> */}
       <div className={styles.form_upload_course_section}>
-        <h2>¿Quieres apoyar a la comunidad?</h2>
-        <p>Empieza subiendo tu curso</p>
+        <h2 className={styles.form_upload_course_section_title}>¿Quieres apoyar a la comunidad?</h2>
+        <p className={styles.form_upload_course_section_description}>Empieza subiendo tu curso</p>
         <FormUploadCourse />
       </div>
       <Footer />
     </section>
   );
 };
-
-export default CommunityPage;
+export default dynamic(async () => await Promise.resolve(CommunityPage), {
+  ssr: false,
+});
