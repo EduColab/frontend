@@ -12,6 +12,7 @@
   
   .scroll-horizontal {
     display: flex;
+    margin-top: 20px;
     overflow-x: scroll;
   }
   
@@ -49,6 +50,7 @@
   align-items: center;
   font-size: 14px;
   font-weight: 600;
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
 }
 
 .verTodosBtn .link{
