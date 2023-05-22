@@ -25,7 +25,6 @@ jobs:
 
       - run: npm ci
       - run: npm i
-      - run: npm run build 
 
       - name: Deploy to Stage
         if: github.ref == 'refs/heads/stage'
@@ -35,6 +34,7 @@ jobs:
           sudo cp -r frontend stage
           cd stage/frontend
           sudo cp ./env/.env.stage .env
+          sudo npm run build
           sudo pm2 restart frontend-stage
 
       - name: Deploy to Production
@@ -45,4 +45,5 @@ jobs:
           sudo cp -r frontend production
           cd production/frontend
           sudo cp ./env/.env.production .env
+          sudo npm run build
           sudo pm2 restart frontend-production
