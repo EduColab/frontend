@@ -22,7 +22,7 @@ const Curso = ({params}) => {
   return (
     <div className={styles.container}>
         <h1>{curso?.name}</h1>
-        <div className={styles.description}><p className={styles.p}>Detalles:</p>{curso.description}</div>
+        <div className={styles.description}><p className={styles.p}>Detalles:</p>{curso?.description}</div>
         <button className={styles.button}>Iniciar</button>
         </div>
   )
