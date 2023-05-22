@@ -8,6 +8,7 @@ import Carrers from "../components/careers/careers.jsx";
 import Universities from "@/components/universities/universities";
 
 
+
 export default function Home({titleC}) {
   
   return (
