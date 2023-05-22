@@ -2,9 +2,10 @@ import axios from "axios";
 export const postCourseService = async (name, description) => {
   const userTemp = localStorage.getItem("userTemp");
   const token = localStorage.getItem("token");
-  const url = `${process.env.NEXT_PUBLIC_API_URL}/api/courses`;
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/courses/`;
   console.log(url);
-  const data = `name=${name}&description=${description}`;
+  const data = `name=${name}&description=${description}&type=${"community"}&
+  owner=${"admin@solucionesdeingenio.com"}`;
 
   const options = {
     method: "POST",
