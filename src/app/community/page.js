@@ -76,7 +76,7 @@ const CommunityPage = () => {
     const fetchCommunityCourses = async () => {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/courses/?type=community/`,
+          `${process.env.NEXT_PUBLIC_API_URL}/courses/?type=community`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
