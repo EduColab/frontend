@@ -12,20 +12,21 @@ const ComponenteTarjeta = ({src, title}) => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      setToken(localStorage.getItem("token"));
+      const localToken = localStorage.getItem("token");
+      if (localToken) {
+        setToken(localToken);
+      } else {
+        setToken("not token");
+      }
     }
   }, []);
 
-  console.log({token})
-
-  // useEffect(() => {
-  //   if(token.length > 0 ) {
-  //     axios.get(`${process.env.NEXT_PUBLIC_API_URL}/programs`, {headers: {Authorization: `Bearer ${token}`}})
-  //     .then((res) => {
-  //       setPrograms(res.data)
-  //     })
-  //   }
-  // }, [token])
+  useEffect(() => {
+      axios.get(`${process.env.NEXT_PUBLIC_API_URL}/programs`, {headers: {Authorization: `Bearer ${token}`}})
+      .then((res) => {
+        setPrograms(res.data)
+      })
+  }, [token])
 
   return (
     <div className="componente-tarjeta">
