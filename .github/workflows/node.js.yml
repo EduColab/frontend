@@ -34,7 +34,7 @@ jobs:
           sudo mkdir -p stage
           sudo cp -r frontend stage
           cd stage/frontend
-          sudo cp -r ./env/.env.stage .env.local
+          sudo cp ./env/.env.stage .env.local
           pm2 restart frontend-stage
 
       - name: Deploy to Production
@@ -44,5 +44,5 @@ jobs:
           sudo mkdir -p production
           sudo cp -r frontend production
           cd production/frontend
-          sudo cp -r ./env/.env.production .env.local
+          sudo cp ./env/.env.production .env.local
           pm2 restart frontend-production
