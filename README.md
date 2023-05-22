@@ -1,7 +1,7 @@
 Welcome to Educolab
 ## Production mode
 
-for see the project on production you can click [here](http://18.119.143.131:3015/)
+for see the project on production you can click [here : http://18.119.143.131:3015](http://18.119.143.131:3015/)
 
 ## Developer mode
 
