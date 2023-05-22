@@ -35,7 +35,7 @@ jobs:
           sudo cp -r frontend stage
           cd stage/frontend
           sudo cp ./env/.env.stage .env.local
-          pm2 restart frontend-stage
+          sudo pm2 restart frontend-stage
 
       - name: Deploy to Production
         if: github.ref == 'refs/heads/main'
@@ -45,4 +45,4 @@ jobs:
           sudo cp -r frontend production
           cd production/frontend
           sudo cp ./env/.env.production .env.local
-          pm2 restart frontend-production
+          sudo pm2 restart frontend-production
