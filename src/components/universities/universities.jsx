@@ -21,10 +21,12 @@ const universities = ({ src, title }) => {
   }, []);
 
   useEffect(() => {
+    if(token.length > 0 ) {
       axios.get(`${process.env.NEXT_PUBLIC_API_URL}/universities`, {headers: {Authorization: `Bearer ${token}`}})
       .then((res) => {
         setUniversities(res.data)
       })
+    }
   }, [token])
 
   const router = useRouter();
