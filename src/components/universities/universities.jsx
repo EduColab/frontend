@@ -16,8 +16,6 @@ const universities = ({ src, title }) => {
       const localToken = localStorage.getItem("token");
       if (localToken) {
         setToken(localToken);
-      } else {
-        setToken("not token");
       }
     }
   }, []);

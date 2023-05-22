@@ -15,17 +15,17 @@ const ComponenteTarjeta = ({src, title}) => {
       const localToken = localStorage.getItem("token");
       if (localToken) {
         setToken(localToken);
-      } else {
-        setToken("not token");
       }
     }
   }, []);
 
   useEffect(() => {
+    if(token.length > 0 ) {
       axios.get(`${process.env.NEXT_PUBLIC_API_URL}/programs`, {headers: {Authorization: `Bearer ${token}`}})
       .then((res) => {
         setPrograms(res.data)
       })
+    }
   }, [token])
 
   return (
