@@ -1,8 +1,11 @@
+'use client'
 import React from "react";
+import { useRouter } from 'next/navigation';  
 
-const cards = ({src, title}) => {
+const cards = ({src, title, id}) => {
+  const router = useRouter();
   return (
-    <div className="card">
+    <div className="card" onClick={() => router.push(`/carrera/${id}`)}>
       <img
         src={src}
         alt="Imagen"
