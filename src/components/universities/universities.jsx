@@ -18,7 +18,7 @@ const universities = ({ src, title }) => {
   }, []);
 
   useEffect(() => {
-    if(token.length > 0 ) {
+    if(token?.length > 0 ) {
       axios.get(`${process.env.NEXT_PUBLIC_API_URL}/universities`, {headers: {Authorization: `Bearer ${token}`}})
       .then((res) => {
         setUniversities(res.data)
@@ -34,7 +34,7 @@ const universities = ({ src, title }) => {
         <button className="verTodosBtn">{universities.length}</button>
       </div>
       <div className="scroll-horizontal">
-        {universities.map((university) => (
+        {universities?.map((university) => (
           <Cards title={university.name} src={'https://static.vecteezy.com/system/resources/previews/013/139/659/original/library-school-education-learning-university-flat-line-filled-icon-beautiful-logo-button-over-yellow-background-for-ui-and-ux-website-or-mobile-application-free-vector.jpg'} url={'university'} id={university.id}/>
         ))}
         {/* <Cards
