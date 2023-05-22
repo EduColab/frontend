@@ -58,9 +58,9 @@ const Footer = () => {
         </Link>
       </div>
       <div className={styles.pages}>
-        <p><Link href="#">Nosotros</Link></p>
-        <p><Link href="#">Comunidad</Link></p>
-        <p><Link href="#">Escuelas</Link></p>
+        <p><Link href="/about">Nosotros</Link></p>
+        <p><Link href="/community">Comunidad</Link></p>
+        <p><Link href="/carrersLong">Escuelas</Link></p>
       </div>
       <div>© Educolab. All rights reserved</div>
     </section>
