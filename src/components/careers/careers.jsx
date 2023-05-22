@@ -16,14 +16,16 @@ const ComponenteTarjeta = ({src, title}) => {
     }
   }, []);
 
-  useEffect(() => {
-    if(token.length > 0 ) {
-      axios.get(`${process.env.NEXT_PUBLIC_API_URL}/programs`, {headers: {Authorization: `Bearer ${token}`}})
-      .then((res) => {
-        setPrograms(res.data)
-      })
-    }
-  }, [token])
+  console.log({token})
+
+  // useEffect(() => {
+  //   if(token.length > 0 ) {
+  //     axios.get(`${process.env.NEXT_PUBLIC_API_URL}/programs`, {headers: {Authorization: `Bearer ${token}`}})
+  //     .then((res) => {
+  //       setPrograms(res.data)
+  //     })
+  //   }
+  // }, [token])
 
   return (
     <div className="componente-tarjeta">
