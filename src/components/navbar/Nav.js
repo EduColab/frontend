@@ -1,11 +1,16 @@
 "use client";
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Link from "next/link";
 import styles from "./Nav.module.css";
 const Nav = () => {
-  const username = localStorage.getItem("user");
-  
-  
+  const [username, setUsername] = useState("")
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const usernamestorage = localStorage.getItem("user")
+      setUsername(usernamestorage);
+    }
+  }, [])
+  console.log(username)
   return (
     <header className={styles.header}>
       <p className={styles.logo}>
