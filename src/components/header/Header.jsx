@@ -9,15 +9,15 @@ export const Header = () => {
   const [results, setResults] = useState([]);
   const [tokenstorage, setTokenstorage] = useState("");
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const tokenstorage = localStorage.getItem("token");
       setTokenstorage(tokenstorage);
     }
-  }, [])
- 
+  }, []);
+
   const fetchApi = async (value) => {
     const res = await axios
-      .get(`${process.env.NEXT_PUBLIC_API_URL}/programs/options`, {
+      .get(`${process.env.NEXT_PUBLIC_API_URL}/finder?q=${value}`, {
         headers: {
           Authorization: `Bearer ${tokenstorage}`,
         },
@@ -31,7 +31,8 @@ export const Header = () => {
             program.name.toLowerCase().includes(value)
           );
         });
-        setResults(filtering)
+        console.log(filtering)
+        setResults(filtering);
       });
   };
   const handleChange = (value) => {
@@ -50,7 +51,7 @@ export const Header = () => {
           value={input}
           onChange={(e) => handleChange(e.target.value)}
         />
-        <SearchBarList results={results}/>
+        <SearchBarList results={results} />
       </div>
       <div>
         <p className={styles.p}>

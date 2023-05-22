@@ -2,18 +2,28 @@
     width: 100%;
     display: flex;
     background-color: #c7ff65;
-    border-radius: 10px;
+    border-radius: 20px;
     flex-direction: column;
     max-height: 300px;
     text-align: left;
     position: absolute;
-  
+    overflow-y: scroll;
     top: 70px;
+    left: 10px;
 }
 .container{
     padding: 10px;
 }
 .p{
-    
+    position: relative;
+    padding: 5px;
     font-size: 0.4em;
+    border-radius: 10px;
+    border: 2px solid #c7ff65;
+    cursor: pointer;
+}
+.p:hover{
+    background-color: aliceblue;
+    border: 2px solid #000;
+    transition: all ease 0.5s;
 }
