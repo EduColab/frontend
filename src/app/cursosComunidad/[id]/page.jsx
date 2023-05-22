@@ -8,12 +8,15 @@ const Curso = ({params}) => {
     const {id} = params
     const fetchCurso = async () => {
         const res = await axios(
-          `${process.env.NEXT_PUBLIC_API_URL}/courses/id/${id}`,
+          `${process.env.NEXT_PUBLIC_API_URL}/courses/?type=community`,
           { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
-        ).then(async (response) => {
-          setCurso(response.data);
+        ).then((response) => {
+            console.log(response.data)
+            let filteredRes = response.data.filter(course=>course.id == id)
+            console.log(filteredRes)
+          setCurso(filteredRes[0]);
         });
-        console.log(res);
+
       };
       useEffect(() => {
         fetchCurso();
@@ -21,8 +24,8 @@ const Curso = ({params}) => {
       console.log(curso)
   return (
     <div className={styles.container}>
-        <h1>{curso?.name}</h1>
-        <div className={styles.description}><p className={styles.p}>Detalles:</p>{curso.description}</div>
+        <h1 className={styles.h1}>{curso?.name}</h1>
+        <div className={styles.description}><p className={styles.p}>Detalles:</p>{curso?.description}</div>
         <button className={styles.button}>Iniciar</button>
         </div>
   )

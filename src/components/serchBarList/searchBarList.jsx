@@ -11,7 +11,10 @@ export const SearchBarList = ({ results }) => {
               window.location.href = `/cursosUniversidad/${program.id}`
             }
             if(program.type === "Cursos_Comunidad"){
-              window.location.href = `/cursosUniversidad/${program.id}`
+              window.location.href = `/curso/${program.id}`
+            }
+            if(program.type === "Carreras"){
+              window.location.href = `/carrera/${program.id}`
             }
                   //Un if para cada tipo y que lo envia a la pagina adecuada con su id para 
                   // que dentro del componente sacar el id como  lo hice en este ejemplo:
