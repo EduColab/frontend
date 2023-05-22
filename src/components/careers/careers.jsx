@@ -30,11 +30,11 @@ const ComponenteTarjeta = ({src, title}) => {
       <div className="title-container">
         <h2>Carreras / Cursos</h2>
         <div className="verTodosBtn">
-          {programs.length}
+          {programs?.length}
         </div>
       </div>
       <div className="scroll-horizontal">
-        {programs.map((program) => (
+        {programs?.map((program) => (
           <Cards id={program.id} title={program.name} src={'https://www.viewsonic.com/library/wp-content/uploads/2020/08/LB0174-e1602142212898.jpg'} url={'carrera'} />
         ))}
         {/* <Cards    
