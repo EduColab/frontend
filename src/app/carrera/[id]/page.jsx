@@ -27,8 +27,8 @@ const University = ({ params }) => {
     <div className={styles.container}>
       <div className={styles.header}>
       
-        <h1 className={styles.h1}>{career.name}</h1>
-        <div className={styles.description}><p className={styles.p}>Detalles:</p><p className={styles.p}>{career.description}</p></div>
+        <h1 className={styles.h1}>{career?.name}</h1>
+        <div className={styles.description}><p className={styles.p}>Detalles:</p><p className={styles.p}>{career?.description}</p></div>
 
       </div>
     </div>
