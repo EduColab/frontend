@@ -85,7 +85,7 @@
   align-items: center;
   justify-content: space-evenly;
 
-  background-color: var(--olivine);
+  background-color: var(--beige);
 }
 .form_upload_course_section_title {
   font-size: 2rem;

@@ -2,10 +2,10 @@ import axios from "axios";
 export const postCourseService = async (name, description) => {
   const userTemp = localStorage.getItem("userTemp");
   const token = localStorage.getItem("token");
-  const url = `${process.env.NEXT_PUBLIC_API_URL}/courses/`;
+  const email = localStorage.getItem("email");
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/courses/?type=community`;
   console.log(url);
-  const data = `name=${name}&description=${description}&type=${"community"}&
-  owner=${"admin@solucionesdeingenio.com"}`;
+  const data = `name=${name}&description=${description}&type=${"community"}&owner=${email}`;
 
   const options = {
     method: "POST",
@@ -19,8 +19,6 @@ export const postCourseService = async (name, description) => {
   console.log(options);
   const result = await axios(options);
   if (result.status === 200) {
-    localStorage.setItem("token", result.data.token);
-    localStorage.setItem("user", userTemp);
     window.location.href = "/community"; // or whatever route you want to redirect to
   }
 
