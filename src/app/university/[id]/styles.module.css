@@ -1,0 +1,63 @@
+.container{
+    width: 100%;
+    display: flex;
+   align-items: center;
+    flex-direction: column;
+    background-color: #c1ffa6;
+}
+.header{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-image: url('../../../../public/universities.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #99ff6d;
+}
+.h1{
+    z-index: 10;
+}
+.h1::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0.5;
+    top:0;
+    right:0;
+    z-index: -1;
+}
+.coursesContainer{
+    padding: 30px;
+    display: flex;
+    width: 500px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #99ff6d;
+    margin-top: -150px;
+    z-index: 20;
+    border: 2px solid #000;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+.h2{
+    color: #000;
+}
+.curso{
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.curso:hover{
+ background-color: #fff;
+ transition: all ease 0.5s;
+}
