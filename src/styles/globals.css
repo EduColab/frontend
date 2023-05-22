@@ -18,25 +18,22 @@ body {
   --davys--gray: #605b56;
 }
 
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+
+/* Estilos para el scrollbar */
+body::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+/* Estilos para el thumb (la parte deslizable del scrollbar) */
+body::-webkit-scrollbar-thumb {
+  background-color: var(--green-yellow); /* Color del thumb */
+  border-radius: 5px; /* Bordes redondeados del thumb */
+  border: solid 3px black;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 25px;
-  width: 5px;
-  height: 5px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+/* Estilos para el track (la pista en la que se desliza el thumb) */
+body::-webkit-scrollbar-track {
+  background-color: var(--gray); /* Color del track */
+  border-radius: 5px; /* Bordes redondeados del track */
+  
 }
