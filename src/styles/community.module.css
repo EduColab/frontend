@@ -50,18 +50,37 @@
 
 /*MORE SECTIONS OF COMMUNITY PAGE*/
 .section_community_courses {
-  margin-top: 100px 0px;
+  padding: 100px 0px;
   width: 100%;
   height: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-}
 
+  background-color: black;
+}
+.section_community_courses_title, .section_community_courses_description{
+  color: white;
+}
+.section_community_courses_title {
+  font-size: 1.9rem;
+  font-weight: bolder;
+  text-decoration: underline;
+}
 .community_courses_list {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+
+/*FROM SECTION*/
+.form_upload_course_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--olivine);
 }

@@ -87,8 +87,8 @@ const CommunityPage = () => {
         <TopList name={"Cursos"} list={courses} />
       </div>
       <div className={styles.section_community_courses}>
-        <h2>Cursos de Comunidad</h2>
-        <p> Descubre los cursos de la comundiad más votados </p>
+        <h2 className={styles.section_community_courses_title}>Cursos de Comunidad</h2>
+        <p  className={styles.section_community_courses_description}> Descubre los cursos de la comundiad más votados </p>
         <div className={styles.community_courses_list}>
           {courses.map(({ id, name, description }) => {
             return (
@@ -100,18 +100,15 @@ const CommunityPage = () => {
             );
           })}
         </div>
-        <p>Agendar, formulario, persona, </p>
       </div>
       {/* <div className={styles.section_upcoming_courses}>
         <h2>Cursos Nuevos de la comunidad</h2>
         <p>Descubre los cursos que vienen proximamente</p>
         <CommunityUpcomingCourses />
       </div> */}
-      <div>
+      <div className={styles.form_upload_course_section}>
         <h2>¿Quieres apoyar a la comunidad?</h2>
         <p>Empieza subiendo tu curso</p>
-      </div>
-      <div>
         <FormUploadCourse />
       </div>
       <Footer />

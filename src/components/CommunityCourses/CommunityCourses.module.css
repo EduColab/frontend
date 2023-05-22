@@ -1,6 +1,6 @@
 .card {
   width: 250px;
-  height: 500px;
+  height: 450px;
   padding: 0px 10px;
   border: 2px solid black;
 
@@ -10,12 +10,21 @@
   justify-content: space-evenly;
 
   background-color: var(--beige);
-  box-shadow: 0 0 10px var(--green-yellow);
 
   background-image: url("https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=2000");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  filter: grayscale(50%);
+  transition: 0.2s;
+
+  color: white;
+}
+.card:hover {
+  width: 300px;
+  cursor: pointer;
+  filter: grayscale(0%);
+  box-shadow: 0 0 10px var(--green-yellow);
 }
 .figure {
   width: 200px;

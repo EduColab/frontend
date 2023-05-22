@@ -12,7 +12,7 @@ const FormUploadCourse = () => {
       <div>
         <label for="titulo">Título del curso:</label>
         <input
-          classname={styles.form_inputs}
+          className={styles.form_inputs}
           type="text"
           id="titulo"
           name="titulo"
@@ -22,7 +22,7 @@ const FormUploadCourse = () => {
       <div>
         <label for="descripcion">Descripción:</label>
         <textarea
-          classname={styles.form_inputs}
+          className={styles.form_inputs}
           id="descripcion"
           name="descripcion"
           required
@@ -31,7 +31,7 @@ const FormUploadCourse = () => {
       <div className={styles.archive}>
         <label for="archivo">Archivo del curso:</label>
         <input
-          classname={styles.form_inputs}
+          className={styles.form_inputs}
           type="file"
           id="archivo"
           name="archivo"
