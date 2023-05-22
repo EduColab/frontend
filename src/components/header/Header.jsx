@@ -1,15 +1,40 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./header.module.css";
-import { rubik } from "@/app/fonts";
+import { chakra } from "@/app/fonts";
+import { SearchBarList } from "../serchBarList/searchBarList.jsx";
+import axios from "axios";
 export const Header = () => {
   const [input, setinput] = useState("");
+  const [results, setResults] = useState([]);
+  const token = localStorage.getItem("token");
+  const fetchApi = async (value) => {
+    const res = await axios
+      .get(`${process.env.NEXT_PUBLIC_API_URL}/programs/options`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((response) => {
+        const filtering = response.data.filter((program) => {
+          return (
+            value &&
+            program &&
+            program.name &&
+            program.name.toLowerCase().includes(value)
+          );
+        });
+        setResults(filtering)
+      });
+    console.log(res);
+  };
   const handleChange = (value) => {
     setinput(value);
+    fetchApi(value);
   };
   return (
     <div className={styles.header}>
-      <h1 className={`${rubik.className} ${styles.h1}`}>
+      <h1 className={`${chakra.className} ${styles.h1}`}>
         Conecta con tu futura carrera profesional
       </h1>
       <div className={styles.pseudoInput}>
@@ -19,6 +44,7 @@ export const Header = () => {
           value={input}
           onChange={(e) => handleChange(e.target.value)}
         />
+        <SearchBarList results={results}/>
       </div>
       <div>
         <p className={styles.p}>
@@ -26,7 +52,6 @@ export const Header = () => {
         </p>
         <p className={styles.p}>ayudarte en tu camino profesional.</p>
       </div>
-      
     </div>
   );
 };
