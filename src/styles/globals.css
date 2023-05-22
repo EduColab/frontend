@@ -18,6 +18,7 @@ body {
   --davys--gray: #605b56;
 }
 
+<<<<<<< HEAD
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -39,4 +40,24 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+=======
+
+/* Estilos para el scrollbar */
+body::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
+}
+
+/* Estilos para el thumb (la parte deslizable del scrollbar) */
+body::-webkit-scrollbar-thumb {
+  background-color: var(--green-yellow); /* Color del thumb */
+  border-radius: 5px; /* Bordes redondeados del thumb */
+  border: solid 3px black;
+}
+
+/* Estilos para el track (la pista en la que se desliza el thumb) */
+body::-webkit-scrollbar-track {
+  background-color: var(--gray); /* Color del track */
+  border-radius: 5px; /* Bordes redondeados del track */
+  
+>>>>>>> task
 }

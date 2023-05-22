@@ -1,4 +1,5 @@
 .componente-tarjeta {
+<<<<<<< HEAD
     width: 60%;
     margin: 0 auto;
     padding: 20px;
@@ -33,18 +34,56 @@
     padding: 10px;
   }
 .title-container{
+=======
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 40px;
+}
+h2 {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #99ff6d;
+}
+
+.scroll-horizontal {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.card {
+  width: 200px;
+  margin-right: 10px;
+}
+
+.card img {
+  width: 150px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.card-content {
+  padding: 10px;
+}
+.title-container {
+>>>>>>> task
   width: 100%;
   display: flex;
   justify-content: space-between;
-
 }
+<<<<<<< HEAD
 .verTodosBtn{
   width: 100px;
+=======
+.verTodosBtn {
+  width: 90px;
+>>>>>>> task
   margin-top: 9px;
   background-color: #fff869;
   height: 35px;
   border-radius: 25px;
   border: none;
+<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,3 +99,13 @@
   font-size: 14px;
   font-weight: 500;
 }
+=======
+}
+.verTodosBtn .link {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  margin: 7px;
+  display: flex;
+}
+>>>>>>> task
