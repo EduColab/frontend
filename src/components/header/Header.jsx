@@ -7,12 +7,19 @@ import axios from "axios";
 export const Header = () => {
   const [input, setinput] = useState("");
   const [results, setResults] = useState([]);
-  const token = localStorage.getItem("token");
+  const [tokenstorage, setTokenstorage] = useState("");
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const tokenstorage = localStorage.getItem("token");
+      setTokenstorage(tokenstorage);
+    }
+  }, [])
+ 
   const fetchApi = async (value) => {
     const res = await axios
       .get(`${process.env.NEXT_PUBLIC_API_URL}/programs/options`, {
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${tokenstorage}`,
         },
       })
       .then((response) => {
@@ -26,7 +33,6 @@ export const Header = () => {
         });
         setResults(filtering)
       });
-    console.log(res);
   };
   const handleChange = (value) => {
     setinput(value);
