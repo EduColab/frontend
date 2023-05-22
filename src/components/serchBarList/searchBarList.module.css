@@ -1,0 +1,19 @@
+.searchList{
+    width: 100%;
+    display: flex;
+    background-color: #c7ff65;
+    border-radius: 10px;
+    flex-direction: column;
+    max-height: 300px;
+    text-align: left;
+    position: absolute;
+  
+    top: 70px;
+}
+.container{
+    padding: 10px;
+}
+.p{
+    
+    font-size: 0.4em;
+}
