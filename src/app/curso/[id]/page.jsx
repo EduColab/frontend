@@ -21,7 +21,7 @@ const Curso = ({params}) => {
       console.log(curso)
   return (
     <div className={styles.container}>
-        <h1>{curso?.name}</h1>
+        <h1 className={styles.h1}>{curso?.name}</h1>
         <div className={styles.description}><p className={styles.p}>Detalles:</p>{curso?.description}</div>
         <button className={styles.button}>Iniciar</button>
         </div>

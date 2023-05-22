@@ -8,7 +8,7 @@ export const SearchBarList = ({ results }) => {
           <p className={styles.p} key={id} onClick={()=>{
             
             if(program.type === "Cursos_Universidades"){
-              window.location.href = `/cursosUniversidad/${program.id}`
+              window.location.href = `/curso/${program.id}`
             }
             if(program.type === "Cursos_Comunidad"){
               window.location.href = `/curso/${program.id}`
