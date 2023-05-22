@@ -35,7 +35,7 @@ const universities = ({ src, title }) => {
       </div>
       <div className="scroll-horizontal">
         {universities.map((university) => (
-          <Cards title={university.name} src={'https://static.vecteezy.com/system/resources/previews/013/139/659/original/library-school-education-learning-university-flat-line-filled-icon-beautiful-logo-button-over-yellow-background-for-ui-and-ux-website-or-mobile-application-free-vector.jpg'} url={'university'} id={university.name}/>
+          <Cards title={university.name} src={'https://static.vecteezy.com/system/resources/previews/013/139/659/original/library-school-education-learning-university-flat-line-filled-icon-beautiful-logo-button-over-yellow-background-for-ui-and-ux-website-or-mobile-application-free-vector.jpg'} url={'university'} id={university.id}/>
         ))}
         {/* <Cards
           src={
