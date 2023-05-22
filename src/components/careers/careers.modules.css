@@ -1,51 +1,61 @@
 .componente-tarjeta {
-  width: 60%;
-  margin: 0 auto;
-  padding: 20px;
-  margin-top: 40px;
-}
-h2 {
-  margin-bottom: 10px;
-  font-size: 30px;
-  color: #99ff6d;
-}
-
-.scroll-horizontal {
-  display: flex;
-  overflow-x: scroll;
-}
-
-.card {
-  width: 200px;
-  margin-right: 10px;
-}
-
-.card img {
-  width: 150px;
-  height: 200px;
-  border-radius: 5px;
-}
-
-.card-content {
-  padding: 10px;
-}
-.title-container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  h2{
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #99ff6d;
+  }
+  
+  .scroll-horizontal {
+    display: flex;
+    margin-top: 20px;
+    overflow-x: scroll;
+  }
+  
+  .card {
+    width: 200px;
+    margin-right: 10px;
+  }
+  
+  .card img {
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+  
+  .card-content {
+    padding: 10px;
+  }
+.title-container{
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.verTodosBtn {
-  width: 90px;
+.verTodosBtn{
+  width: 100px;
   margin-top: 9px;
   background-color: #fff869;
   height: 35px;
   border-radius: 25px;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
 }
-.verTodosBtn .link {
+
+.verTodosBtn .link{
   text-decoration: none;
   color: black;
   text-align: center;
-  margin: 7px;
-  display: flex;
+  font-size: 14px;
+  font-weight: 500;
 }

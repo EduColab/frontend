@@ -1,44 +1,56 @@
 import React from "react";
 import styles from "./FormUploadCourse.module.css";
 import dynamic from "next/dynamic";
-
+import { postCourseService } from "@/services/postCourseService";
+import { useState } from "react";
 
 const FormUploadCourse = () => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Aquí pueden agregar la lógica para enviar los datos del formulario al servidor
+
+    const result = await postCourseService(title, description);
+    console.log(result);
+  };
+
   return (
-    <form
-      action="/ruta-de-procesamiento"
-      method="POST"
-      encType="multipart/form-data"
-      className={styles.form_container}
-    >
+    <form onSubmit={handleSubmit} className={styles.form_container}>
       <div>
-        <label htmlFor="titulo">Título del curso:</label>
+        <label htmlFor="title">Título del curso:</label>
         <input
           className={styles.form_inputs}
           type="text"
-          id="titulo"
-          name="titulo"
+          id="title"
+          name="title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
           required
+          placeholder="Escribe un titulo!"
         />
       </div>
       <div>
-        <label htmlFor="descripcion">Descripción:</label>
+        <label htmlFor="description">Descripción:</label>
         <textarea
           className={styles.form_inputs}
-          id="descripcion"
-          name="descripcion"
+          id="description"
+          name="description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
           required
+          placeholder="Escribe una descripción!"
         ></textarea>
       </div>
       <div className={styles.archive}>
-        <label htmlFor="archivo">Archivo del curso:</label>
+        <label htmlFor="archive">Archivo del curso:</label>
         <input
           className={styles.form_inputs}
           type="file"
-          id="archivo"
-          name="archivo"
+          id="archive"
+          name="archive"
           accept=".pdf,.doc,.docx"
-          required
         />
       </div>
       {/* <div>
