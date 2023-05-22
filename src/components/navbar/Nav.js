@@ -2,6 +2,7 @@
 import React, {useState, useEffect} from "react";
 import Link from "next/link";
 import styles from "./Nav.module.css";
+
 const Nav = () => {
   const [username, setUsername] = useState("")
   useEffect(() => {
@@ -40,10 +41,15 @@ const Nav = () => {
 
         <span>|</span>
         {username ? (
-          <p className={styles.link} onClick={()=>{
-            localStorage.removeItem('user')
-            window.location.href = "/";
-          }}>cerrar sesión</p>
+          <p
+            className={styles.link}
+            onClick={() => {
+              localStorage.removeItem("user");
+              window.location.href = "/";
+            }}
+          >
+            cerrar sesión
+          </p>
         ) : (
           <Link href="/register" className={styles.link}>
             Registrate

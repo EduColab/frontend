@@ -9,11 +9,10 @@ import Carrers from "../components/careers/careers.jsx";
 import Universities from "@/components/universities/universities";
 import { useState } from "react";
 
-export default function Home({ titleC }) {
-  const [recurso, setRecurso] = useState({});
-  const handleSetRecurso = (recurso) => {
-    setRecurso(recurso);
-  };
+
+
+export default function Home({titleC}) {
+  
   return (
     <>
       <Nav />

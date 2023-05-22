@@ -9,7 +9,7 @@ const TopList = ({ name, list }) => {
       <div className={styles.list}>
         {list.map(({ id, name }) => {
           return (
-            <div className={styles.list_item}>
+            <div key={id}className={styles.list_item}>
               <p>{id}</p>
               <h3>{name}</h3>
             </div>
