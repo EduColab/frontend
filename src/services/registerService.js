@@ -17,6 +17,7 @@ export const RegisterService = async ( email, password, username ) => {
     localStorage.setItem('token', result.data.token);
     localStorage.setItem('user', username);
     localStorage.setItem("userTemp", username)
+    localStorage.setItem("email", email)
     window.location.href = '/' // or whatever route you want to redirect to
 }
   return result;
