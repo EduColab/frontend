@@ -22,8 +22,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-
-      - run: npm ci
       - run: npm i
 
       - name: Deploy to Stage
