@@ -14,6 +14,7 @@ import dynamic from "next/dynamic";
 const CommunityPage = () => {
   const [universities, setUniversities] = useState([]);
   const [courses, setCourses] = useState([]);
+  const [communityCourses, setCommunityCourses] = useState([]);
 
   useEffect(() => {
     const fetchDataUniversities = async () => {
@@ -71,6 +72,35 @@ const CommunityPage = () => {
     fetchDataCourses();
   }, []);
 
+  useEffect(() => {
+    const fetchCommunityCourses = async () => {
+      try {
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/courses/?type=community/`,
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Error al obtener los datos");
+        }
+
+        let data = await response.json();
+        data = data.splice(0, 5);
+        console.log(data);
+        setCommunityCourses(data);
+        // console.log(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchCommunityCourses();
+  }, []);
+
   return (
     <section className={styles.section}>
       <Nav />
@@ -96,7 +126,7 @@ const CommunityPage = () => {
           Descubre los cursos de la comundiad más votados{" "}
         </p>
         <div className={styles.community_courses_list}>
-          {courses.map(({ id, name, description }) => {
+          {communityCourses.map(({ id, name, description }) => {
             return (
               <CommunityCourses
                 key={id}
@@ -113,8 +143,12 @@ const CommunityPage = () => {
         <CommunityUpcomingCourses />
       </div> */}
       <div className={styles.form_upload_course_section}>
-        <h2 className={styles.form_upload_course_section_title}>¿Quieres apoyar a la comunidad?</h2>
-        <p className={styles.form_upload_course_section_description}>Empieza subiendo tu curso</p>
+        <h2 className={styles.form_upload_course_section_title}>
+          ¿Quieres apoyar a la comunidad?
+        </h2>
+        <p className={styles.form_upload_course_section_description}>
+          Empieza subiendo tu curso
+        </p>
         <FormUploadCourse />
       </div>
       <Footer />
